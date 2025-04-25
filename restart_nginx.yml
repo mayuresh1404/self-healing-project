@@ -1,0 +1,15 @@
+- name: Restart NGINX service
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Restart NGINX container
+      docker_container:
+        name: self-healing-infra_nginx_1
+        state: started
+        restart: yes
+      register: result
+    - name: Log restart action
+      copy:
+        content: "{{ result | to_json }}"
+        dest: "/logs/ansible.log"
+      when: result.changed

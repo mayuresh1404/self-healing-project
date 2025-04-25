@@ -1,0 +1,7 @@
+---
+- name: Sample Ansible Playbook
+  hosts: localhost
+  tasks:
+    - name: Log a message
+      ansible.builtin.debug:
+        msg: "Ansible playbook triggered by webhook"

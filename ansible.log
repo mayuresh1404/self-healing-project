@@ -1,0 +1,9 @@
+{
+  "changed": true,
+  "container": {
+    "Name": "self-healing-infra_nginx_1",
+    "State": {
+      "Status": "running"
+    }
+  }
+}
